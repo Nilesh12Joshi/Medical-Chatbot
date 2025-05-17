@@ -1,0 +1,130 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #343541;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0;
+  color: white;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #202123;
+  border-bottom: 1px solid #444;
+}
+
+.chat-header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #343541;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #10a37f;
+  color: white;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #444654;
+  color: white;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #444;
+  background-color: #202123;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  background-color: #40414f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.chat-input input:focus {
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #0e8e6b;
+}
+
+@media screen and (max-width: 576px) {
+  .chat-container {
+    max-width: 100%;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: scroll;
+  background-color: #343541;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.chat-body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
